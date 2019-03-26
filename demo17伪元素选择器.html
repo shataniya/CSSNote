@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>伪元素选择器</title>
+        <style type="text/css">
+        /*
+        伪元素选择器
+        伪元素：就是假的元素
+            假的元素>>真的元素(就是我们自己写的元素)
+
+            开始：before标签
+            结束：after标签
+
+            可以看见伪元素一般是不显示的，但是确实真实存在的，伪元素存在于标签开始之后，在标签结束之前
+        
+        */
+        div::before{
+            content:"hello";
+            color:lawngreen;
+        }
+        div::after{
+            content:"world";
+            color:lightcoral
+        }
+        div{
+            color:mediumorchid;
+            background-color:thistle;
+            /* font-size:40px; */
+        }
+
+        /*
+        对于块元素，有一些特性：
+        1.第一个字母    first-letter
+        2.第一行    first-line
+        */
+        div::first-letter{
+            color:yellow;
+            font-size:60px;
+        }
+        p::first-letter{
+            color:yellow;
+            font-size:60px;
+        }
+        p::first-line{
+            color:yellowgreen;
+            font-size:30px;
+        }
+
+        /*
+        伪类选择器
+        状态
+        
+        */
+        </style>
+    </head>
+    <body>
+        <div>
+            <!--<before>-->
+            我爱你
+            <!--<after>-->
+        </div>
+        <p>我爱你</p>
+        <a href="https://www.mi.com/" target="_blank">小米商城</a>
+    </body>
+</html>

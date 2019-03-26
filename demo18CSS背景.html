@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS背景</title>
+        <style type="text/css">
+        /*
+        CSS背景
+        1.background-color是背景颜色
+        2.background-image是背景图片，需要使用url('')来配合使用     url('')是用来填入背景图片的地址
+            例如：background-image:url('')
+            同时，在引入背景图片的时候，浏览器会默认把图片平铺
+                1.如果图片小了，那么浏览器会把这张小图片重复平铺知道铺满整个页面
+                2.如果图片大了，那么浏览器只会显示局部
+        3.background-repeat是设置背景平铺属性
+            属性值是repeat，说明是平铺,默认是沿着x轴和y轴平铺
+                如果想只沿着x轴平铺,属性值就是repeat-x
+                如果想只沿着y轴平铺，属性值就是repeat-y
+            属性值是no-repeat就是不平铺
+        4.background-attachment就是设置背景图片固定
+            用法：background-attachment:fixed;//这样就可以固定背景图片了
+        5.background-position就是图片的位置,通过这个属性可以移动图片的位置
+            语法：background-position:x值 y值;
+                    x值和y值也可以是百分数
+                x值：left center right
+                y值：top center bottom
+        
+        6.为了简化书写，有这么一个默认顺序
+        background:color;image;repeat;attachment;position
+
+
+        */
+        body{
+            /* height: 1000px; */
+            background-color:thistle;
+            background-image:url('img/04.png');
+            /* background-repeat:repeat-x; *//*沿着x轴平铺*/
+            /* background-repeat:repeat-y; *//*沿着y轴平铺*/
+            background-repeat:no-repeat;
+            /* background-position:100px 100px; */
+            background-position:center center;
+            background-attachment:fixed;/*固定背景图片*/
+        }
+        /* body{
+            height: 1000px;
+            background:lightskyblue url('img/04.png') no-repeat fixed center top;//中间不需要加分号
+        } */
+
+
+        </style>
+    </head>
+    <body>
+
+    </body>
+</html>

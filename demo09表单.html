@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>表单</title>
+    </head>
+    <body>
+        <!--
+            表单就是用来收集不同类型的用户输入  发送给/提交给服务器
+            输入：内容，文本，密码，单选框，多选框，下拉框
+            提交：提交按钮
+            http协议，即超文本传输协议，就是浏览器和服务器的通讯
+            http模式：请求-应答的模式   浏览器主动地发起请求->服务器接收请求->自身做处理->结果返回浏览器->浏览器根据结果展示出来
+            请求的方式:GET  POST
+        -->
+        <!--<from></from> from标签就是表单-->
+        <!--举例一个注册页面-->
+        <form action="demo09表单.html" method="GET">
+            <!--action属性就是你提交表单之后要跳转的网页，说白了就是你想把这份表单提交给哪个服务器，哪个网页，action就是用来跳转到这个网页的-->
+            用户名<input type="text" name="account"><br>
+            密码：<input type="password" name="password"><br>
+            性别：<input type="radio" name="man" value="male">男<input type="radio" name="man" value="female">女<br>
+            <!--在input的标签里，属性radio是单选框，如果单选框有一样的name的属性值，那么只能选其中的一个而不能同时选中-->
+            <!--复选框,即input标签里的，type的checkbox属性，就是复选框-->
+            兴趣：<input type="checkbox" name="kan" value="book">看书<input type="checkbox" name="kan" value="football">踢球<input type="checkbox" name="kan" value="basketball">篮球<input type="checkbox" name="kan" value="music">听音乐
+            <input type="checkbox" name="kan" value="girl">泡妞<br>
+            <!--下拉框，就是<select></select>,select标签就是下拉列表，一个选项就是一个option标签，即<option></option>-->
+            城市：
+            <select name="city">
+                <option value="shanghai">上海</option>
+                <option value="beijing">北京</option>
+                <option value="guangzhou">广州</option>
+                <option value="changsha">长沙</option>
+                <option value="haikou">海口</option>
+                <option value="changchun">长春</option>
+            </select><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

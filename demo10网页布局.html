@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>网页布局</title>
+    </head>
+    <body>
+        <!--
+            按功能设计成很多小块>>然后把它排列好，排列成设计稿的样子>>最后才是吧具体的内容填充到小块里面去
+            整体思路就是：功能>>小块>>排列好>>填充内容
+
+            网页的布局，就是前面这一块，即  功能>>小块>>排列好
+
+            在html布局中，为了实现小块的功能，会使用div标签，即<div></div>
+
+            div：就是一个容器，可以放东西，可以放图片，也可以放表单，表格等都可以
+
+            布局：
+            div+css的布局
+        -->
+        <div style="background-color:aqua;width: 100%;height:50px">导航</div>
+        <div style="background-color:greenyellow;width: 20%;float: left;height: 300px">菜单</div>
+        <div style="background-color:hotpink;width: 80%;float: left;height: 300px">内容</div>
+        <!--iframe标签就是嵌套页面-->
+        <iframe src="https://www.baidu.com/" style="width:100%;height: 300px"></iframe>
+        <iframe src="https://www.jd.com" style="width:100%;height:300px"></iframe>
+        <!--frameset:管理后台-->
+    </body>
+</html>

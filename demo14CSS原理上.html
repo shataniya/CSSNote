@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS原理上</title>
+        <style type="text/css">
+        
+        /*
+        CSS原理
+        1.优先原则：
+            后解析的内容会覆盖掉前面解析的内容
+            1.同一个选择器，从上往下
+            2.同一类型的选择器，从上往下
+            3.不同类型的选择器  优先级
+                先解析优先级低的，再解析优先级高的，因此显示的都是优先级最高的样式
+                优先级：* div class id
+                id的优先级是最高的
+            4.外部样式  内部样式
+                1.外部样式：就是通过link标签引入的样式
+                2.内部样式：就是在html文件里面含有的样式
+                3.外部样式和内部样式时合在一起使用的
+            使用顺序：先解析外部样式，再解析内部样式，如果有相同的样式，就会覆盖
+            5.内联样式
+            内联样式就是标签里面的样式
+            外部样式和内部样式都解析完之后，再解析内联样式，换句话说就是内联样式优先级最低，但是是最优先显示的
+            6.加了important字符的，是最后执行
+                说白了就是加了important就会最终显示
+                important字符尽量不要出现，一般是在调试代码的时候会使用一些
+
+        2.继承原则：
+            1.嵌套里面的某些标签，会拥有外部的某些样式
+                1.跟文字，文本这类的样式，可以被继承，其他的不能被继承
+                2.块级元素宽度如果不被设置，那么它会继承最接近它的父元素的宽度，高度是里面的内容决定
+            2.子元素可以继承父元素的某些样式，某些属性
+        
+        */
+        .hello{
+            width:200px;
+            height:300px;
+            background-color:silver;
+            color:violet!important;
+            /*加了!important就会最后执行*/
+        }
+        div.txt{
+            width:300px;
+            /* height:300px; */
+            background-color:thistle;
+            color:tomato;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="hello" style="width:100px;height:100px;color:tomato;">hello world</div>
+        <div class="txt">
+            <div>div1
+                <div>div2
+                    <p>p2</p>
+                </div>
+                <p>p1</p>
+            </div>
+        </div>
+    </body>
+</html>

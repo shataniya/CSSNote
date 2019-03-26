@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS语法</title>
+        <style type="text/css">
+        div{
+            background-color:aqua;
+            /* border:1px solid black; *//*border就是外边框 1px soild black;意思就是添加黑色的1px的外边框*/
+        }
+        /* *{
+            border:1px solid black;
+        } */
+        /*大括号前面的名称div就是选择器，写css样式的时候格式都是    选择器{样式}    */
+        /*
+        选择器分个为4个大类：
+        1.基本选择器：
+            1.*通配符
+                语法：*{样式} 
+                    对象是所有的标签都使用这个样式
+            2.标签
+                语法：标签{样式}  
+                    对所有这一类的标签都使用这个样式
+            3.id选择器  id是某一个标签的id
+                语法：#标签id值{样式}
+                    对所有这一类标签，id为这个id值的标签使用这个样式    是一一对应的关系
+                另外语法：标签#id属性值
+                    意思就是在这一类标签中，id属性是这个id属性值的所有标签，但是一般情况下都会省略标签，直接就是使用  #id属性值
+            4.class选择器
+                语法：.class属性值{样式}
+                    那个小点可以理解为class属性,然后接着class属性值
+                另外语法：标签.class属性值
+                    意思就是在这一类标签中，class属性是这个class属性值的所有标签，但是一般情况下都会省略标签，直接就是使用  .class属性值
+
+            //现在更多的是形成了这么一种习惯或者风格：
+            对于样式，尽量是使用class属性设置样式，而id属性都是给javascript编写代码的时候用的
+        2.组合选择器：
+        3.属性选择器：
+        4.伪元素选择器：
+        
+        */
+        #text{
+            background-color:palevioletred;
+            color:rebeccapurple;
+            font-size: 20px;
+        }
+        *#text{
+            background-color:palevioletred;
+            color:rebeccapurple;
+            font-size: 20px;
+        }
+        div#text{
+            background-color:palevioletred;
+            color:rebeccapurple;
+            font-size: 20px;
+        }
+        .text2{
+            background:red
+        }
+        /**/
+        </style>
+    </head>
+    <body>
+        <div id="text">我爱你</div>
+        <div id="text">爱你一万年</div>
+        <div class="text2">我爱你</div>
+    </body>
+</html>
+<!--
+    编程思想：唯一性编程思想
+    1.标签id>>唯一性>>相当于人的身份证号码，有两个特点：
+        1.有且仅有一个
+        2.每个标签的id是不一样的//人为的控制元素的id就是唯一的，写代码时让每个id都不一样，这就是唯一性编程思想
+
+
+ -->

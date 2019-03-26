@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>超链接</title>
+    </head>
+    <body>
+        <!--
+            超级链接
+            <a></a>     a标签就是超链接，可以实现网页之间的跳转
+            href属性：在href里面填的就是网页的地址
+            target属性：如果在值是_blank，那么当点击这个超链接的时候，会自动新建一个网页
+            如果不添加target属性，那么会默认在点击超链接的时候，把原网页直接跳转到要跳转的网页
+
+            a标签的内容也可以放图片，也就是图片就是一个超链接，当点击图片的时候，就会跳转到新的网页
+
+            a标签还有另外一个很重要的作用：
+            书签标记：锚点      作用就是从一个位置跳转到另外一个位置
+            语法格式：# 相应位置的id    用这个方法可以回到页面的最顶上或者说最顶部
+
+
+            
+        -->
+        <a href="https://www.mi.com/" target="_blank">我是一个超链接</a>
+        <!--点开我是一个超链接之后，会新建一个网页，这个新建的网页就是https://www.mi.com-->
+        <a href="#end" target="_blank" id="start">最下面</a>
+        <!--可以看见点击图片以后会新建一个https://www.mi.com的网页，即小米官网-->
+        <a href="https://www.mi.com/" target="_blank"><img src="img/07.png" alt="夏日祭" title="夏日祭" id="mid"></a>
+        <a href="#start" target="_blank" id="end">最上面</a>
+    </body>
+</html>

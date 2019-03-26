@@ -1,0 +1,27 @@
+/*
+    1.font-family就是字体，修改font-family的属性值就是修改字体
+        "微软雅黑"英文就是"Microsoft YaHei"
+    2.font-size就是字体的大小，修改font-size就是修改字体的大小，这个大小实际上是字体的高度，至于字体的宽度是根据字体的比例决定的
+        如果不设置字体大小，那么默认就是16px,即1em      1em == 16px     2em == 32px
+    3.font-weight就是字体的粗细，属性值的范围是100~900
+        也有3个英文单词来代替：lighter normal bold
+    4.font-style就是字体的形状，正常normal，斜体italic
+
+    5.简便的写法
+    语法：font:style weight size/line-height family
+    其中size family必须要写，其他的可以是默认的
+    
+    6.line-height就是行高
+
+
+*/
+body{
+    /* font-family:"微软雅黑"; */
+    /* font-family:"宋体"; */
+    font-family:"Microsoft YaHei";
+    font-size:60px;
+    /* font-weight:900; */
+    font-weight:lighter;
+    font-style:normal;
+    line-height:100px;
+}

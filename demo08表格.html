@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>表格</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <!--
+                    colspan 规定单元格可以横跨的列数    就是合并列
+                    rowspan 规定单元格可以横跨的行数    就是合并行
+                -->
+                <th>部门</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>薪水</th>
+            </tr>
+            <tr>
+                <td rowspan="4">开发组</td>
+                <td>小明</td>
+                <td>男</td>
+                <td>10k</td>
+            </tr>
+            <tr>
+                <td>小红</td>
+                <td>女</td>
+                <td>10k</td>
+            </tr>
+            <tr>
+                <td>小栏</td>
+                <td>男</td>
+                <td>10k</td>
+            </tr>
+            <tr>
+                <td colspan="2">工资合计</td>
+                <td>30k</td>
+            </tr>
+        </table>
+        <!--
+            <tabel>标签就是表格 表格是由若干行组成的，每行即<tr>标签
+                <tr>在有若干个单元格    <th>标题</th>   <td>内容</td></tr>
+        -->
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS链接和列表</title>
+        <style type="text/css">
+        /*
+        伪类
+        4中状态
+        1.初始状态
+            a:link{}
+        2.被访问
+            a:visited{}
+        3.鼠标移动
+            a:hover{}//注意要用引号
+        4.点击
+            a:active{}
+        
+        */
+        a:link{
+            color:greenyellow;
+            font-size:30px
+        }
+        a:visited{
+            color:hotpink;
+            font-size:30px;
+        }
+        a:hover{
+            color:lightskyblue;
+            font-size:50px;
+        }
+        a:active{
+            color:magenta;
+            font-size:30px;
+        }
+        /*
+        
+        
+        */
+        ul li{
+            list-style-type:none;
+            /*
+            list-style-type就是对于前面小点的处理
+                1.none  消除前面的小点
+                2.circle    变成空心点
+                3.disc  变成是实心点
+                4.square    实心方块
+            
+            */
+            background-image:url("img/04.png");
+            height:325px;
+            background-repeat:repeat-y;
+            background-color:mediumorchid;
+            padding: 300px 600px 0;
+        }
+        ol li{
+            list-style-type:lower-roman;
+            /*
+            1.demical   阿拉伯数字
+            2.lower-alpha   小写英文字母
+            3.upper-alpha   大写英文字母
+            4.lower-roman   小写罗马字母
+            5.upper-roman   大写罗马字母
+
+            */
+        }
+        </style>
+    </head>
+    <body>
+        <a href="#1">这是第一个链接</a>
+        <br><br>
+        <a href="#2">这是第二个链接</a>
+        <br>
+        <ul>
+            <li>江南</li>
+            <li>海南</li>
+            <li>长春</li>
+            <li>天津</li>
+            <li>北京</li>
+        </ul>
+        <ol>
+            <li>江南</li>
+            <li>海南</li>
+            <li>长春</li>
+            <li>天津</li>
+            <li>北京</li>
+        </ol>
+    </body>
+</html>

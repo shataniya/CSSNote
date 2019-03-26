@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS布局</title>
+        <style type="text/css">
+        /*
+            当有浮动的时候，文字，文本，图片都会围绕这个浮动
+        
+        */
+        
+        div{
+            /* border:1px solid black; */
+            /* float:left; */
+           /*  float:right; */
+           background-color:powderblue;
+           margin:20px;
+        }
+        .box1{
+            width:200px;
+            height:200px;
+            background-color:pink
+        }
+        .box2,.box3,.box4,.box5{
+            width:200px;
+            height:200px;
+            float:left;
+            background-color:greenyellow;
+        }
+        /*利用伪元素类消除浮动*/
+        .con::after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+        /*利用伪元素消除margin的重叠*/
+        .con::before{
+            content:"";
+            display:table;
+        }
+        </style>
+    </head>
+    <body>
+        <!--
+            div>>独占一行>>float 
+
+
+         -->
+         <div class="con">
+            <div class="box1">div1</div>
+            <div class="box2">div2</div>
+            <div class="box3">div3</div>
+            <div class="box4">div4</div>
+            <div class="box5">div5</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS文本</title>
+        <style type="text/css">
+        /*
+        1.color就是字体的颜色，修改字体的color属性值就是修改字体的颜色
+        2.letter-spacing就是字符之间的距离,默认是0px
+        3.word-spacing就是字间距
+        4.direction就是书写的方向，默认是ltr，即left to right，也就是从左到右写
+        5.text-decoration就是画线
+            text-decoration:
+                1.none
+                2.line-through,中间一条线穿过
+                3.overline,字顶画线
+                4.underline，字底画线
+        6.text-align就是文字对齐方式
+            text-align:
+                1.center    中心对齐
+                2.left      左对齐
+                3.right     右对齐
+                4.justify   两端对齐
+        7.text-indent就是开头缩进，例如文本开头空两格就可以用这个
+
+        8.text-transform
+            text-transform:
+                1.uppercase;大写
+                2.lowercase;小写
+                3.capitalize;第一个首字母大写
+        
+        9.white-space
+            white-space:
+                1.nowrop;容器不包含，可以撑出容器,就是多出的部分可以超出容器
+
+        10.vertical-align就是垂直对齐
+            vertical-align:
+                1.top
+                2.center
+                3.bottom
+                也可以百分比设置
+
+        */
+        .txt1{
+            color:magenta;
+            font-size:30px;
+            letter-spacing:10px;
+            /* text-decoration:line-through; */
+            text-align:center;
+            text-transform:uppercase;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;/*超出部分省略，用省略号...表示*/
+            /*ellipsis*/
+                /*
+                1.默认是clip
+                2.ellipsis
+                */
+        }
+        img{
+            vertical-align:top;
+        }
+        .txt2{
+            color:rebeccapurple;
+            font-size:30px;
+            word-spacing:10px;
+            direction:ltr;
+            text-decoration:overline;
+            text-align:left;
+            text-indent:60px;
+            text-transform:lowercase;
+        }
+        .txt3{
+            color:rebeccapurple;
+            font-size:30px;
+            word-spacing:-10px;
+            direction:ltr;
+            text-decoration:underline;
+            text-align:right;
+            text-transform:capitalize;
+        }
+        .txt4{
+            color:magenta;
+            font-size:30px;
+            letter-spacing:10px;
+            text-decoration:line-through;
+            text-align:justify;
+        }
+        p{
+            width:800px;
+            background-color:skyblue;
+        }
+        body{
+            background-color:yellowgreen;
+        }
+        </style>
+    </head>
+    <body>
+        <p class="txt1" title="我是非常长的一段字符">
+            <img src="img/04.png">
+            我是非常长的一段字符
+        </p>
+        <p class="txt2">hello world</p>
+        <p class="txt3">hello world</p>
+        <p class="txt4">hello world</p>
+    </body>
+</html>

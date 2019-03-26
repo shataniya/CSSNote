@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS定位</title>
+        <style type="text/css">
+        /*
+            定位：
+            1.固定定位，即position:fixed;
+            2.相对定位，即position:relative;
+                相对定位不会影响其他事物的定位，只会改变自己的定位
+            3.绝对定位，即position:absolute;
+        
+        
+        */
+        body{
+            height: 1000px;
+        }
+        div{
+            width:50px;
+            height:50px;
+            border:1px solid black;
+            background:yellowgreen;
+            /*固定定位*/
+            /* position:fixed; */
+            /* bottom:100px;
+            right:0px; */
+        }
+        .box1{
+            position:absolute;
+            top:50px;
+            left:100px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="box1">div1</div>
+        <div>div2</div>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>CSS盒子模型</title>
+        <style type="text/css">
+        /*
+            在页面里面，所有的元素都可以看成是矩形元素
+                所有的元素-->矩形的盒子
+            
+            盒子：
+            内容>>内边距>>盒子框>>外边距
+
+            1.border,就是盒子框
+            2.padding，就是内边距
+                设置方法有4种：
+                1.只有一个值    前提是上下左右都相同
+                2.上下，左右    前提就是上下和左右都是相同的值  例如：padding:10px 20px;//上下10px，左右20px
+                3.上 左右 下    前提就是左右的值是相同的，上的值在前面  下的值在后面
+                4.上 右 下 左   就是一个顺时针方向
+                5.也可以拆分开来
+                    1.padding-top,上
+                    2.padding-bottom，下
+                    3.padding-left，左
+                    4.padding-right，右
+            注意的是，背景不包含边框，只包含内容和内边距
+
+            3.margin,就是外边距,基本用法和padding一样
+            但是要注意的是，margin会有一些系统的bug：margin重叠
+                1.平级的元素时，margin会取最大值
+                    解决方法：
+                    1.float
+                    2.inline-block
+                2.嵌套关系时，如果父元素和子元素只有margin属性，那么margin属性就会重叠
+                    解决方法：
+                    1.border
+                    2.padding
+
+
+        */
+        div{
+            width:800px;
+            font-size:30px;
+            font-weight:lighter;
+        }
+        .box1{
+            border:1px solid black;/*border就是盒子框*/
+            /* padding:20px; */
+            margin:10px;
+        }
+        .box2{
+            border:1px solid fuchsia;
+            padding:10px 20px;
+            margin:20px 10px;
+        }
+        .box3{
+            border:2px solid greenyellow;
+            padding:10px 20px 20px;
+            margin:10px 20px 30px;
+        }
+        .box4{
+            border:1px solid rosybrown;
+            padding:10px 20px 30px 40px;
+            margin:10px 20px 30px 40px;
+        }
+        .box5{
+            margin:10px;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="box1">
+            <div class="box5">我是div5</div>
+        </div>
+        <br><br>
+        <div class="box2">我是div2</div>
+        <br><br>
+        <div class="box3">我是div3</div>
+        <br><br>
+        <div class="box4">我是div4</div>
+    </body>
+</html>

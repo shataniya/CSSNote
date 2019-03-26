@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>图片映射</title>
+    </head>
+    <body>
+        <a href="https://www.mi.com/"><img src="img/06.png" alt="夏日祭" title="夏日祭"></a>
+        <!--a标签可以把一张图片变成超链接，但是如果我们想要把一张图片里不同的部位变成实现跳转多个页面，那么显然a标签功能有限-->
+        <img src="img/07.png" alt="四月是你的谎言" title="四月是你的谎言" usemap="#april">
+        <!--在img标签里添加usemap属性，属性值是 # map标签的名称(即name属性的值)     相当于把这个图片当成了一个地图-->
+        <map name="april">
+            <area shape="circle" coords="748,522,35" href="https://www.mi.com/" alt="小米商城" target="_blank">
+            <area shape="rect" coords="930,535,956,576" href="https://www.jd.com/?cu=true&utm_source=baidu-pinzhuan&utm_medium=cpc&utm_" alt="京东商城" target="_blank">
+            <!--
+                shape就是形状属性，有三个：圆(circle),矩形(rect),多边形(poly) 
+                coords中文就是坐标，就是设置坐标的意思
+                    圆的坐标：设置中心点，以及圆的半径
+                    矩形的坐标：左上角的坐标，右下角的坐标
+            -->
+        </map>
+        <!--map标签就是地图标签，相当于把一张图片当成地图-->
+        <!--area标签就是地图里的可点击区域-->
+        
+    </body>
+</html>
